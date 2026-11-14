@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-page: #e8f4fc;
+  --bg-card: #ffffff;
+  --accent: #0ea5e9;
+  --accent-dark: #0284c7;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --border: #e2e8f0;
+
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.75;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+}
+
+.prose h1 {
+  @apply text-3xl font-bold text-slate-900 mb-6 pb-3 border-b border-slate-200;
+}
+
+.prose h2 {
+  @apply text-2xl font-semibold text-slate-800 mt-10 mb-4;
+}
+
+.prose h3 {
+  @apply text-xl font-semibold text-slate-800 mt-8 mb-3;
+}
+
+.prose p {
+  @apply mb-5 text-slate-700 leading-8;
+}
+
+.prose ul {
+  @apply list-disc pl-6 mb-5 text-slate-700;
+}
+
+.prose ol {
+  @apply list-decimal pl-6 mb-5 text-slate-700;
+}
+
+.prose li {
+  @apply mb-2 leading-7;
+}
+
+.prose strong {
+  @apply font-semibold text-slate-900;
+}
+
+.prose a {
+  @apply text-sky-600 hover:text-sky-700 underline underline-offset-2 transition-colors;
+}
+
+.prose blockquote {
+  @apply border-l-4 border-sky-300 bg-sky-50 pl-5 pr-4 py-3 my-6 italic text-slate-700 rounded-r-lg;
+}
+
+.prose code {
+  @apply bg-slate-100 text-slate-800 px-1.5 py-0.5 rounded text-sm font-mono;
+}
+
+.prose pre {
+  @apply bg-slate-900 text-slate-50 p-4 rounded-lg overflow-x-auto mb-6 text-sm leading-6;
+}
+
+.prose pre code {
+  @apply bg-transparent text-inherit p-0 rounded-none;
+}
+
+.prose hr {
+  @apply my-8 border-slate-200;
+}
+
+/* 图片居中显示 */
+.prose img {
+  @apply rounded-lg shadow-sm my-6 max-w-full;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 图片所在的段落也居中，避免内联时错位 */
+.prose p:has(img) {
+  text-align: center;
+}
+
+/* 表格容器内滚动 */
+.prose .table-wrapper,
+.prose div:has(> table) {
+  overflow-x: auto;
+}
+
+/* 表头样式：带背景、居中、加粗 */
+.prose thead {
+  @apply bg-slate-100;
+}
+
+.prose th {
+  @apply border border-slate-300 px-4 py-3 font-semibold text-slate-700;
+  text-align: center !important;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+/* 单元格样式：带边框、垂直居中 */
+.prose td {
+  @apply border border-slate-200 px-4 py-2.5 text-slate-700;
+  vertical-align: middle;
+}
+
+/* 隔行变色 */
+.prose tbody tr:nth-child(even) {
+  @apply bg-slate-50;
+}
+
+/* 行悬停效果 */
+.prose tbody tr:hover {
+  @apply bg-sky-50;
+}
+
+/* 图例、表例等 <center> 标签内容居中 */
+.prose center {
+  display: block;
+  text-align: center;
+  margin-top: -1rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  color: #475569;
+}
+
+.prose center:has(+ table),
+.prose center:has(+ div > table) {
+  margin-top: 0.75rem;
+  margin-bottom: 0.5rem;
+}

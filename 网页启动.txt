@@ -1,0 +1,7 @@
+将node.js加入环境变量：
+
+$env:PATH = "$env:USERPROFILE\nodejs\node-v20.15.1-win-x64;$env:PATH"
+
+启动本地服务器：
+
+npm run dev

@@ -15,12 +15,12 @@ const DOWNLOAD_LINKS: Record<string, { href: string; label: string }> = {
     label: "实测数据可在这里下载",
   },
   "==自动校核工具可在这里下载==": {
-    href: "downloads/AnytownCalibration.exe",
+    href: "https://github.com/jlhyy/water-distribution-simulation/releases/download/v1.0/AnytownCalibration.exe",
     label: "自动校核工具可在这里下载",
   },
   // 第五章 Markdown 中该标记缺少右半部分，做容错处理
   "==自动校核工具": {
-    href: "downloads/AnytownCalibration.exe",
+    href: "https://github.com/jlhyy/water-distribution-simulation/releases/download/v1.0/AnytownCalibration.exe",
     label: "自动校核工具可在这里下载",
   },
 };
